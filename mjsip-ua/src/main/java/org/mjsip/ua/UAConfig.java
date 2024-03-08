@@ -110,23 +110,23 @@ public class UAConfig implements UAOptions {
 
 	/** Inits the UserAgentProfile. */
 	public void normalize(SipOptions sipConfig) {
-		if (getProxy()!=null && getProxy().equalsIgnoreCase(Configure.NONE)) setProxy(null);
-		if (getDisplayName()!=null && getDisplayName().equalsIgnoreCase(Configure.NONE)) setDisplayName(null);
-		if (getUser()!=null && getUser().equalsIgnoreCase(Configure.NONE)) setUser(null);
-		if (getAuthRealm()!=null && getAuthRealm().equalsIgnoreCase(Configure.NONE)) setAuthRealm(null);
-
-		if (getRegistrar()==null && getProxy()!=null) setRegistrar(new SipURI(getProxy()));
-		if (getProxy()==null && getRegistrar()!=null) setProxy(getRegistrar().getHost());
-		if (getAuthRealm()==null && getProxy()!=null) setAuthRealm(getProxy());
-		if (getAuthRealm()==null && getRegistrar()!=null) setAuthRealm(getRegistrar().getHost());
-		if (getAuthUser()==null && getUser()!=null) setAuthUser(getUser());
-
+		if (getProxy() != null && getProxy().equalsIgnoreCase(Configure.NONE)) setProxy(null);
+		if (getDisplayName() != null && getDisplayName().equalsIgnoreCase(Configure.NONE)) setDisplayName(null);
+		if (getUser() != null && getUser().equalsIgnoreCase(Configure.NONE)) setUser(null);
+		if (getAuthRealm() != null && getAuthRealm().equalsIgnoreCase(Configure.NONE)) setAuthRealm(null);
+		
+		if (getRegistrar() == null && getProxy() != null) setRegistrar(new SipURI(getProxy()));
+		if (getProxy() == null && getRegistrar() != null) setProxy(getRegistrar().getHost());
+		if (getAuthRealm() == null && getProxy() != null) setAuthRealm(getProxy());
+		if (getAuthRealm() == null && getRegistrar() != null) setAuthRealm(getRegistrar().getHost());
+		if (getAuthUser() == null && getUser() != null) setAuthUser(getUser());
+		
 		if (isRegister() && getRegistrar() == null) {
 			throw new IllegalArgumentException("Registrar is required, when registering is enabled.");
 		}
 		
 		String uaAddress = getUaAddress();
-		if (uaAddress==null) {
+		if (uaAddress == null) {
 			if (sipConfig.getHostPort() > 0 && sipConfig.getHostPort() != sipConfig.getDefaultPort()) {
 				setUaAddress(new SipURI(sipConfig.getViaAddr(), sipConfig.getHostPort()).toString());
 			} else {

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mjsip-examples/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mjsip-examples/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mjsip-net/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mjsip-net/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mjsip-phone/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mjsip-phone/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mjsip-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mjsip-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mjsip-sip/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mjsip-sip/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mjsip-sound/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mjsip-sound/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mjsip-ua/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mjsip-ua/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mjsip-util/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mjsip-util/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

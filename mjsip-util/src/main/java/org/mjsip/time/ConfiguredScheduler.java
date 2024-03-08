@@ -21,7 +21,7 @@ public class ConfiguredScheduler implements Scheduler {
 	private ScheduledThreadPoolExecutor executor;
 
 	/**
-	 * Inner daemon scheduler. Daemon timers (associated to the this scheduler) silently terminate
+	 * Inner daemon scheduler. Daemon timers (associated to this scheduler) silently terminate
 	 * (without firing the corresponding timout callbacks) when all program threads end
 	 */
 	private ScheduledThreadPoolExecutor daemonExecutor;

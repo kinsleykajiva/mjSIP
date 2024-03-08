@@ -47,15 +47,15 @@ public class SipStack {
 	public static final String OTAG_precondition="precondition";
 
 	static {
-		String v;
-		try (InputStream in = SipStack.class
+		String v = "unknown";
+		/*try (InputStream in = SipStack.class
 				.getResourceAsStream("/META-INF/maven/org.mjsip/mjsip-sip/pom.properties")) {
 			Properties properties = new Properties();
 			properties.load(in);
 			v = properties.getProperty("version");
 		} catch (IOException ex) {
 			v = "unknown";
-		}
+		}*/
 		version = v;
 		release = "mjsip " + v;
 	}
