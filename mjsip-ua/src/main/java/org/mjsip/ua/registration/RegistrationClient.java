@@ -204,6 +204,9 @@ public class RegistrationClient implements TransactionClientListener {
 			this._expireTime = expire_time;
 		}
 		String call_id=_sipProvider.pickCallId();
+		
+		System.out.println("xxvvv---"+ _registrarUri + ":9099");
+		System.out.println("xxvvFFFFFFFFFv---"+ _registrarUri.getPort() );
 		SipMessage req = _sipProvider.messageFactory().createRegisterRequest(_registrarUri, _toNAddr, _fromNAddr,
 				_contactNAddr, call_id);
 
@@ -228,7 +231,7 @@ public class RegistrationClient implements TransactionClientListener {
 			LOG.debug("Register body type: " + content_type + "; length: " + body.length + " bytes");
 			req.setBody(content_type,body);
 		}
-		
+		System.out.println("xx Registering " + _contactNAddr + " (expiry " + expire_time + " secs) at " + _registrarUri);
 		if (LOG.isDebugEnabled()) {
 			if (expire_time > 0) {
 				LOG.debug("Registering " + _contactNAddr + " (expiry " + expire_time + " secs) at " + _registrarUri);
